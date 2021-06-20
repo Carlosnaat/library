@@ -9,7 +9,7 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.17.2"
+        //classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.17.2"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
@@ -19,11 +19,11 @@ allprojects {
         google()
         jcenter()
     }
-    apply plugin: "com.jfrog.artifactory"
+    //apply plugin: "com.jfrog.artifactory"
     apply plugin: 'maven-publish'
 }
 
-artifactory {
+/*artifactory {
     contextUrl = "${artifactory_contextUrl}"
     publish {
         repository {
@@ -52,7 +52,7 @@ artifactory {
 
         }
     }
-}
+}*/
 
 task clean(type: Delete) {
     delete rootProject.buildDir
