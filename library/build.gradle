@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.library'
 }
-apply plugin: "com.jfrog.artifactory"
+//apply plugin: "com.jfrog.artifactory"
 apply plugin: 'maven-publish'
 
 android {
