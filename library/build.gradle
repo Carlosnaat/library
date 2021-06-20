@@ -45,6 +45,7 @@ dependencies {
 def packageName = 'com.naat.library'
 def libraryVersion = System.getenv("LIBRARY_VERSION") ?: "0.0.1"
 
+/*
 publishing {
     publications {
         aar(MavenPublication) {
@@ -88,6 +89,33 @@ publishing {
                 configurations.api.getDependencies().each { dep -> addDependency(dep, "compile") }
                 // List all "implementation" dependencies (for new Gradle) as "runtime" dependencies
                 configurations.implementation.getDependencies().each { dep -> addDependency(dep, "runtime") }
+            }
+        }
+    }
+}*/
+
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.naat.library'
+                artifactId = 'final'
+                version = '1.0.0'
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                groupId = 'com.naat.library'
+                artifactId = 'final-debug'
+                version = '1.0.0'
             }
         }
     }
