@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LibraryExample</string>
+    <string name="text_launch_btn">Launch library</string>
+</resources>

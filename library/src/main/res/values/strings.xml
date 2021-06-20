@@ -1,0 +1,4 @@
+<resources>
+    <string name="text_task">Launch Task</string>
+    <string name="text_stop_task">Stop task</string>
+</resources>
