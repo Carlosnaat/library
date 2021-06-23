@@ -38,4 +38,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //implements local library
     implementation project(':library')
+    implementation project(':nativelibrary')
 }

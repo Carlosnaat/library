@@ -1,3 +1,4 @@
+include ':nativelibrary'
 include ':library'
 include ':app'
 rootProject.name = "LibraryExample"
